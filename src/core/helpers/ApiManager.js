@@ -2,7 +2,7 @@
 
 import 'whatwg-fetch';
 import ApplicationSettings from '../settings/ApplicationSettings';
-import Utils from './Utils';
+//import Utils from './Utils';
 
 /**
   * Helper function to get "proper" end point url for sails backend API.

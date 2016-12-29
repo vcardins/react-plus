@@ -11,6 +11,7 @@ class App extends React.Component {
     super(props);
   }
 
+
   render () {
 
     return (
@@ -21,6 +22,16 @@ class App extends React.Component {
         </div>
       </div>
     )
+
+    // return (
+    //    <SplitPane
+    //      left={
+    //        <Contacts />
+    //      }
+    //      right={
+    //        <Chat />
+    //      } />
+    //  );
   }
 
   componentDidMount(){

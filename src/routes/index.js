@@ -6,6 +6,7 @@ import { UserAuth } from '../core/helpers';
 import { injectReducer } from '../store/reducers';
 
 const isAuthenticated = UserAuth.isAuthenticated();
+
 export const createRoutes = (store) => {
 /*  Note: Instead of using JSX, we are using react-router PlainRoute,
     a simple javascript object to provide route definitions.
