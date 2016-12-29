@@ -1,0 +1,13 @@
+{
+  "title": "ImmiPlanner",
+  "description": "Starting here a better life",
+  "name": "immiplanner",
+  "defaultRoute": "dashboard",
+  "version": "0.0.1",
+  "tokenPrefix": "immiplanner",
+  "api": {
+    "url": "/",
+    "loginUrl": "token",
+    "prefix": "api"
+  }
+}

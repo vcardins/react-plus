@@ -1,0 +1,25 @@
+{
+  "analyticsId": "UA-71612383-1",
+  "clientId": "045A23D0-3859-42F1-A9CF-AE688EA0F030",
+  "clientSecret": "#$%ˆ&**()*()*)_)",
+  "api": {
+    "url": "http://immiplanner.azurewebsites.net"
+  },
+  "signalR": {
+    "host": "http://immiplanner.azurewebsites.net",
+    "logging": true
+  },
+  "isInDebugMode": true,
+  "providers": {
+    "google": {
+      "clientId": "432486336848-earrujhbo5vb519kms0j65cpcaf9tdgc.apps.googleusercontent.com",
+      "secret": "fbXnqVE8WXLrKMFxQaGgiloW"
+    },
+    "linkedin": {
+      "clientId": "778mif8zyqbei7"
+    },
+    "facebook": {
+      "clientId": "1452782111708498"
+    }
+  }
+}
