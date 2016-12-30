@@ -5,7 +5,7 @@ import * as Enums from 'core/Enums';
 import { Utils } from 'core/helpers/Utils';
 import { OAuthService, OpenIdService, DataProvider } from 'core/Services';
 import { AccessLevel, UserProfile } from 'core/Models';
-import { LocalStorageProvider } from 'core/providers';
+import { LocalStorage } from 'core/providers';
 import { userRoles, accessLevels } from './access';
 
 export class AuthResult {
@@ -24,7 +24,7 @@ export class AuthService {
     private appSettings:IApplicationSettings;
     private publicUser:any = { username: '', role: userRoles.public };
 
-    constructor(appSettings: ApplicationSettings, private localStorageProvider: LocalStorageProvider, private dataProvider:DataProvider,
+    constructor(appSettings: ApplicationSettings, private localStorageProvider: LocalStorage, private dataProvider:DataProvider,
         private http:HttpClient, private oAuthService: OAuthService, private openIdService: OpenIdService) {
 
         this.appSettings = appSettings.instance;

@@ -1,22 +1,20 @@
 import * as _ from 'lodash';
 
-export function checkAccess(requiredLevel:any, currentLevel:any) {
+export function checkAccess(requiredLevel, currentLevel) {
   return !!(requiredLevel.bitMask & currentLevel.bitMask);
 }
 
-export function accessEquals(requiredLevel:any, currentLevel:any) {
+export function accessEquals(requiredLevel, currentLevel) {
   return requiredLevel.bitMask === currentLevel.bitMask;
 }
 
 export class NotAuthorizedException {
-  redirectTo:string;
   constructor(to = '/login') {
     this.redirectTo = to;
   }
 }
 
 export class AccessDeniedException {
-  redirectTo:string;
   constructor(to = '/403') {
     this.redirectTo = to;
   }
@@ -27,7 +25,7 @@ export class AccessDeniedException {
  It starts off with "1" and shifts the bit to the left for each element in the
  roles array parameter
  */
-export function buildRoles(roles:any):any {
+export function buildRoles(roles) {
   let bitMask:string = '01';
 
   if (roles.length > 31) {
@@ -55,7 +53,7 @@ export function buildRoles(roles:any):any {
  This method builds access level bit masks based on the accessLevelDeclaration parameter which must
  contain an array for each access level containing the allowed user roles.
  */
-export function buildAccessLevels(accessLevelDeclarations:any, userRoles:any):any {
+export function buildAccessLevels(accessLevelDeclarations, userRoles) {
 
   /*
     Zero step - transform
@@ -101,7 +99,7 @@ export function buildAccessLevels(accessLevelDeclarations:any, userRoles:any):an
     .reduce((result, { level, name }) => { // eslint-disable-line no-shadow
       const levelName = name;
       const levelsArr = level;
-      const resultBitMask = _.reduce((<any>levelsArr), (resultBitMask:number, roleName:string) => { // eslint-disable-line no-shadow
+      const resultBitMask = Array.reduce((levelsArr), (resultBitMask, roleName) => { // eslint-disable-line no-shadow
 
         if (userRoles.hasOwnProperty(roleName) !== true) {
           console.log(
@@ -111,7 +109,6 @@ export function buildAccessLevels(accessLevelDeclarations:any, userRoles:any):an
 
         return resultBitMask | userRoles[roleName].bitMask;
       }, 0);
-
 
       result[name] = {
         bitMask: resultBitMask

@@ -8,6 +8,10 @@ import { Provider } from 'react-redux';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import ApplicationSettings from './core/settings';
+import { LocalStorage } from './core/helpers';
+
+console.log(ApplicationSettings, LocalStorage);
 
 const MOUNT_ELEMENT = document.getElementById('root');
 
@@ -29,7 +33,7 @@ const history = syncHistoryWithStore(browserHistory, store, {
 })
 
 let render = (key = null) => {
-  const routes = require('./routes/index').default(store)
+  const routes = require('./routes/index').default(store);
   const App = (
     <Provider store={store}>
       <MuiThemeProvider muiTheme={getMuiTheme()}>

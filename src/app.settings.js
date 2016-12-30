@@ -11,19 +11,19 @@ let configBase = {
 	api : {
 		prefix:'api',
 		url: '/',
-		loginUrl:'/token',
-		signupUrl: '/account/register',
-		logoutUrl:'/account/logout',
-		profileUrl: '/me',
+		loginUrl:'token',
+		signupUrl: 'account/register',
+		logoutUrl:'account/logout',
+		profileUrl: 'me',
 	}
 }
 
 let configForDevelopment = {
 	analyticsId: "UA-71612383-1",
-	clientId: "045A23D0-3859-42F1-A9CF-AE688EA0F030",
-	clientSecret: "#$%ˆ&**()*()*)_)",
 	api : {
-    url: 'http://immiplanner.azurewebsites.net/'
+    url: 'http://immiplanner.azurewebsites.net',
+		clientId: "045A23D0-3859-42F1-A9CF-AE688EA0F030",
+		clientSecret: "#$%ˆ&**()*()*)_)",
   },
 	signalR : {
     host: 'http://immiplanner.azurewebsites.net/',
@@ -47,10 +47,10 @@ let configForDevelopment = {
 
 let configForProduction = {
 	analyticsId: "UA-71612383-1",
-	clientId: "045A23D0-3859-42F1-A9CF-AE688EA0F030",
-	clientSecret: "#$%ˆ&**()*()*)_)",
 	api : {
-    url: 'http://localhost:9999/'
+    url: 'http://localhost:9999/',
+		clientId: "045A23D0-3859-42F1-A9CF-AE688EA0F030",
+		clientSecret: "#$%ˆ&**()*()*)_)",
   },
 	signalR : {
     host: 'http://localhost:1340',

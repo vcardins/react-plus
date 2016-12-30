@@ -1,6 +1,6 @@
-﻿export CookieStorageProvider from './CookieStorageProvider';
-export LocalStorageProvider from './LocalStorageProvider';
+﻿export CookieStorage from './CookieStorage';
+export { LocalStorage } from './LocalStorage';
 export Utils from './Utils';
-export GeoLocationIpService from './GeoLocationIpService';
-export ApiManager from './ApiManager';
-export UserAuth from './UserAuth';
+export GeoIpLocator from './GeoIpLocator';
+export Api from './Api';
+export { UserAuth } from './UserAuth';

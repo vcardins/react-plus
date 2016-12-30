@@ -3,10 +3,10 @@ import { UserAuth } from '../../../core/helpers';
 export default {
   path: '/logout',
   onEnter: (nextState, replace) => {
-    UserAuth.deauthenticate();
-
-    // change the current URL to /
+    UserAuth.logout().then((response)=>{
+      // change the current URL to
+      console.log(response);
+    });
     replace('/');
-  },
-  anon: true
+  }
 }

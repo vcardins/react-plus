@@ -2,7 +2,7 @@ import 'whatwg-fetch';
 
 /**
  * Usage:
- *  GeoLocationIpService.get().then((data)=> {
+ *  GeoIpLocator.get().then((data)=> {
     if ( data instanceof Error ) {
       console.error(data);
      } else {
@@ -10,7 +10,7 @@ import 'whatwg-fetch';
      }
    })
  */
-class GeoLocationIpService {
+class GeoIpLocator {
 
   static get(format = "json", domain = null) {
 
@@ -28,4 +28,4 @@ class GeoLocationIpService {
 
 }
 
-export default GeoLocationIpService;
+export default GeoIpLocator;

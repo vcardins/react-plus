@@ -1,3 +1,5 @@
+/* @flow */
+
 export default class Utils {
 
 	static setHashKey(obj, h) {

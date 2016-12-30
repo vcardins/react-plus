@@ -2,7 +2,7 @@
 
 import ApplicationSettings from '../settings';
 
-export class CookieStorageProvider {
+export class CookieStorage {
 
   constructor() {
 

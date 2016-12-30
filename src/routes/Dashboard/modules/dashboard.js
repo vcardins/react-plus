@@ -1,8 +1,6 @@
 /* @flow */
-import { ApiManager } from '../../../core/helpers';
+import { Api } from '../../../core/helpers';
 import type { DashboardObject, DashboardStateObject } from '../interfaces/dashboard.js'
-
-console.log(ApiManager);
 
 // ------------------------------------
 // Constants
@@ -42,12 +40,8 @@ export function saveCurrentDashboard (): Action {
 export const fetchDashboard = (): Function => {
   return (dispatch: Function): Promise => {
     //dispatch(requestDashboard())
-    return ApiManager.get('lookup')
+    return Api.get('bookmark')
       .then(data => dispatch(recieveDashboard(data)));
-
-    // return fetch('https://api.github.com/zen')
-    //   .then(data => data.text())
-    //   .then(text => dispatch(recieveDashboard(text)))
   }
 }
 

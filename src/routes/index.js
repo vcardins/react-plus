@@ -2,8 +2,8 @@
 import App from '../layouts/App/App';
 import Home from './Home';
 import Dashboard from './Dashboard';
-import { UserAuth } from '../core/helpers';
 import { injectReducer } from '../store/reducers';
+import { UserAuth } from '../core/helpers';
 
 const isAuthenticated = UserAuth.isAuthenticated();
 
